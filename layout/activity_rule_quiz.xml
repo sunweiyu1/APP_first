@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/guide_main_act"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fit5120.lookout.GuideMain">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/myDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.fit5120.lookout.lookout.MainActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:id="@+id/myTool">
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/game_bck"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="3dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="toggleNavBar"
+                    android:src="@drawable/ic_menu" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="9dp"
+                    android:src="@drawable/appheader5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ProgressBar
+                    android:id="@+id/progressbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:progress="10"
+                    android:progressTint="@color/right">
+                </ProgressBar>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/qnumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Question Number: "
+                        android:textSize="15dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="@font/fredoka_one">
+                    </TextView>
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Score: "
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/fredoka_one">
+                    </TextView>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="9"
+                android:weightSum="10">
+
+                <TextView
+                    android:padding="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/bgquestion"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/fredoka_one"
+                    android:gravity="center|center_horizontal"
+                    android:text="Question"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:id="@+id/textQuestion">
+                </TextView>
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="20dp"
+                    android:textSize="20dp"
+                    android:text="Select Your Answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layoutParent"
+                    android:gravity="center"
+                    android:fontFamily="@font/fredoka_one">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_marginTop="30dp"
+                    android:layout_weight="6.5"
+                    android:id="@+id/ansLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4.5"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:id="@+id/option1"
+                            android:layout_width="0dp"
+                            android:layout_weight="4.5"
+                            android:layout_height="75dp"
+                            android:textSize="15dp"
+                            android:background="@drawable/bgpurple"
+                            android:layout_marginLeft="20dp"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/fredoka_one"
+                            android:foreground="?android:attr/selectableItemBackground">>
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/option2"
+                            android:layout_width="0dp"
+                            android:layout_weight="4.5"
+                            android:layout_height="75dp"
+                            android:textSize="15dp"
+                            android:background="@drawable/bgpurple"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/fredoka_one"
+                            android:foreground="?android:attr/selectableItemBackground">>
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4.5">
+
+                        <TextView
+                            android:id="@+id/option3"
+                            android:layout_width="0dp"
+                            android:layout_weight="4.5"
+                            android:layout_height="75dp"
+                            android:textSize="15dp"
+                            android:background="@drawable/bgpurple"
+                            android:layout_marginLeft="20dp"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/fredoka_one"
+                            android:foreground="?android:attr/selectableItemBackground">>
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/option4"
+                            android:layout_width="0dp"
+                            android:layout_weight="4.5"
+                            android:layout_height="75dp"
+                            android:textSize="15dp"
+                            android:background="@drawable/bgpurple"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/fredoka_one"
+                            android:foreground="?android:attr/selectableItemBackground">>
+                        </TextView>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/submitButton"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Submit"
+                        android:textSize="25dp"
+                        android:fontFamily="@font/fredoka_one"
+                        android:background="@drawable/bgpurple"
+                        android:foreground="?android:attr/selectableItemBackground">
+                    </Button>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@drawable/drawer_menu"
+            app:menu="@menu/my_menu"
+            app:theme="@style/NavigationDrawerStyle">
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:fontFamily="@font/montserrat"
+                android:text="Enter Your Name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ed_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_username"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/montserrat"
+                android:inputType="textNoSuggestions"
+                android:textColor="@color/colorPrimaryDark"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/tv_connectname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_username"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/montserrat"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:text="Contact Person Name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ed_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_connectname"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:inputType="textPersonName|textNoSuggestions"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/tv_connectphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ed_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/montserrat"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:text="Contact Mobile Number"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <EditText
+                    android:id="@+id/ed_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_connectphone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="9"
+                    android:fontFamily="@font/montserrat"
+                    android:inputType="phone"
+                    android:textCursorDrawable="@null" />
+
+                    <ImageView
+                        android:id="@+id/cont_btn"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:src="@drawable/ic_contacts"></ImageView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ed_phone"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/montserrat"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:text="Message"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/ed_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_help"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/montserrat"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/b_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_password"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Submit"
+                android:textStyle="bold" />
+
+            <!--
+                    <TextView
+                        android:id="@+id/tv_show_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_feedback"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="real-location test"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/holo_blue_dark" />
+            -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/b_begin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:text="START"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/b_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:text="CLOSE"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/star_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    app:sparkbutton_activeImage="@drawable/ic_star_on"
+                    app:sparkbutton_animationSpeed=".85"
+                    app:sparkbutton_iconSize="30dp"
+                    app:sparkbutton_inActiveImage="@drawable/ic_star_off" />
+
+                <TextView
+                    android:id="@+id/tv_describtion"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/white"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:text="Please read me first."
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

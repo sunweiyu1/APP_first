@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapMain">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/volumebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="25dp"
+        android:layout_alignParentRight="true"
+        android:onClick="toggleVol"
+        android:src="@drawable/ic_volume_on">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <RelativeLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/back_text"
+        android:layout_height="50dp"
+        android:elevation="10dp">
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/autocomplete_fragment"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/info_back"
+        android:weightSum="10"
+        android:id="@+id/place_info"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/address_line_1"
+            android:fontFamily="@font/montserrat"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:text="Main Address"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+        </TextView>
+
+        <TextView
+            android:id="@+id/address_line_2"
+            android:fontFamily="@font/montserrat"
+            android:textSize="15dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/black"
+            android:text="Second Address Line"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+        </TextView>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="3"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_clock"
+                android:layout_weight="0.4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            </ImageView>
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/duration"
+                android:fontFamily="@font/montserrat"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            </TextView>
+
+            <ImageView
+                android:src="@drawable/ic_bike"
+                android:layout_weight="0.4"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            </ImageView>
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/distance"
+                android:fontFamily="@font/montserrat"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            </TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:elevation="0dp"
+                app:cardCornerRadius="5dp"
+                android:id="@+id/dir_button"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp">
+                <TextView
+                    android:id="@+id/gdirtext"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:fontFamily="@font/montserrat"
+                    android:onClick="getDir"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/rec"
+                    android:text=" Get Directions "
+                    ></TextView>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/info_back"
+        android:weightSum="10"
+        android:id="@+id/not_layout"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_marginTop="15dp"
+                android:src="@mipmap/caution"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="2">
+
+            </ImageView>
+
+            <TextView
+                android:layout_weight="8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat"
+                android:id="@+id/not_text"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="3dp"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

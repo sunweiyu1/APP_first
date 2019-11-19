@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="225dp"
+    android:weightSum="4"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/container_inw"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:elevation="3dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="15dp"
+        app:strokeColor="@color/rec"
+        app:strokeWidth="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/hr_weather"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/hr_weather"
+                android:layout_alignTop="@+id/hr_weather"
+                android:layout_alignRight="@+id/hr_weather"
+                android:layout_alignBottom="@+id/hr_weather"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/text_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="top|center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="13dp"></TextView>
+
+                <ImageView
+                    android:id="@+id/rec_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="3"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/hiwc"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="2.5"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17dp"></TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="5"
+                        android:src="@mipmap/rain_per">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/rainpr"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="left"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="15dp"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+
+        android:textSize="17dp"
+        android:id="@+id/hrtext"
+        android:gravity="top|center_horizontal"
+        android:textColor="@color/rec"
+        android:fontFamily="@font/montserrat"
+        android:shadowRadius="50"
+        android:shadowDy="0"
+        android:shadowDx="0"
+        android:text="Go for it"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </TextView>
+</LinearLayout>

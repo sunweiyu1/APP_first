@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:orientation="vertical"
+    android:weightSum="10">
+    <TextView
+        android:id="@+id/vid_text"
+        android:layout_weight="2"
+        android:text="Sample vid text"
+        android:fontFamily="@font/montserrat"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+    </TextView>
+
+    <WebView
+        android:layout_weight="8"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/vidWebView"
+        android:layout_height="300dp"
+        android:layout_width="match_parent">
+    </WebView>
+
+</LinearLayout>
